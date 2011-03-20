@@ -399,6 +399,27 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.10</version>
 			</plugin>
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>cobertura-maven-plugin</artifactId>
+              <version>2.4</version>
+              <configuration>
+                <formats>
+                  <format>html</format>
+                  <format>xml</format>
+                </formats>
+        </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-pmd-plugin</artifactId>
+              <version>2.5</version>
+            <configuration>
+              <targetJdk>1.5</targetJdk>
+            </configuration>
+
+            </plugin>
+
 		</plugins>
 	</build>
 	

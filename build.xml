@@ -1,0 +1,12 @@
+<project default="jmeter"> 
+  <path id="jmeter.lib.path">
+    <pathelement location="${basedir}/tools/jmeter/extras/ant-jmeter-1.0.9.jar"/> 
+  </path>
+  <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" classpathref="jmeter.lib.path" />
+  <target name="jmeter"> 
+    <jmeter jmeterhome="${basedir}/tools/jmeter"
+            testplan="${basedir}/src/test/jmeter/gameoflife.jmx"
+            resultlog="${basedir}/target/jmeter-results.jtl"> <jvmarg value="-Xmx512m" />
+    </jmeter> 
+  </target>
+</project>

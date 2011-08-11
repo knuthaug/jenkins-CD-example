@@ -24,4 +24,21 @@ public class RaceTest {
         assertEquals(race.getOrganizer(), "oof");
     }
 
+    @Test
+    public void checkShortNameAreUppercased() {
+        Race race = new Race();
+        race.setName("foo");
+        race.doSomethingWithName();
+        assertEquals(race.getName(), "OOF");
+    }
+
+
+    @Test
+    public void checkLongNameAreLowercased() {
+        Race race = new Race();
+        race.setName("fooBar");
+        race.doSomethingWithName();
+        assertEquals(race.getName(), "raboof");
+    }
+
 }

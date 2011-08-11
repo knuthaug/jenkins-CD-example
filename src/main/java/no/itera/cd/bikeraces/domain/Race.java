@@ -33,5 +33,14 @@ public class Race {
         organizer = new StringBuffer(organizer).reverse().toString();
     }
 
+    public void doSomethingWithName() {
+        name = new StringBuffer(name).reverse().toString();
+        if(name.length() <= 3 ) {
+            name = name.toUpperCase();
+        } else { 
+            name = name.toLowerCase();
+        }
+    }
+
 }
 

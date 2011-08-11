@@ -16,4 +16,12 @@ public class RaceTest {
         assertEquals(true, true);
     }
 
+    @Test
+    public void mangleOrganizerMangles() {
+        Race race = new Race();
+        race.setOrganizer("foo");
+        race.mangleOrganizer();
+        assertEquals(race.getOrganizer(), "oof");
+    }
+
 }

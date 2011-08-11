@@ -10,6 +10,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.lang.StringBuffer;
 
 @Entity
 @RooJavaBean
@@ -28,4 +29,9 @@ public class Race {
     @NotNull
     private String organizer;
 
+    public void mangleOrganizer() {
+        organizer = new StringBuffer(organizer).reverse().toString();
+    }
+
 }
+
